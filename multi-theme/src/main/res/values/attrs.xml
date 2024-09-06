@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="thCalendarGradientColor1" format="color" />
+    <attr name="thCalendarGradientColor2" format="color" />
+    <attr name="thMainBackgroundColor" format="color" />
+    <attr name="thMainMenuBackgroundColor1" format="color" />
+    <attr name="thMainMenuBackgroundColor2" format="color" />
+    <attr name="thMainThemeAlphaColor" format="color" />
+    <attr name="thMainThemeAlphaColor60" format="color" />
+    <attr name="thMainThemeBackgroundImage" format="reference" />
+    <attr name="colorPrimary" format="color" />
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.MultiTheme" parent="Theme.MaterialComponents.NoActionBar">
+    </style>
+
+    <style name="Theme_autumn" parent="Theme.MultiTheme">
+        <item name="thCalendarGradientColor1">@color/transparent</item>
+        <item name="thCalendarGradientColor2">#b3ffffff</item>
+        <item name="thMainBackgroundColor">#fbf4e1</item>
+        <item name="thMainMenuBackgroundColor1">#fbf4e1</item>
+        <item name="thMainMenuBackgroundColor2">#fee1d2</item>
+        <item name="thMainThemeAlphaColor">#ccff9c23</item>
+        <item name="thMainThemeAlphaColor60">#99ff9c23</item>
+        <item name="thMainThemeBackgroundImage">@drawable/image_background_theme_autumn</item>
+        <item name="colorPrimary">#ff9c23</item>
+    </style>
+
+    <style name="Theme_blue_enchantress" parent="Theme.MultiTheme">
+        <item name="thCalendarGradientColor1">@color/transparent</item>
+        <item name="thCalendarGradientColor2">#b3ffffff</item>
+        <item name="thMainBackgroundColor">#e1eef8</item>
+        <item name="thMainMenuBackgroundColor1">#e3f2f6</item>
+        <item name="thMainMenuBackgroundColor2">#e4e1f8</item>
+        <item name="thMainThemeAlphaColor">#cc335ee1</item>
+        <item name="thMainThemeAlphaColor60">#99335ee1</item>
+        <item name="thMainThemeBackgroundImage">@drawable/image_background_theme_blue_enchantress</item>
+        <item name="colorPrimary">#335ee1</item>
+    </style>
+
+    <style name="Theme_grass" parent="Theme.MultiTheme">
+        <item name="thCalendarGradientColor1">@color/transparent</item>
+        <item name="thCalendarGradientColor2">#b3ffffff</item>
+        <item name="thMainBackgroundColor">#f3f6da</item>
+        <item name="thMainMenuBackgroundColor1">#f3f6da</item>
+        <item name="thMainMenuBackgroundColor2">#e0f4ea</item>
+        <item name="thMainThemeAlphaColor">#cc79c85b</item>
+        <item name="thMainThemeAlphaColor60">#9979c85b</item>
+        <item name="thMainThemeBackgroundImage">@drawable/image_background_theme_grass</item>
+        <item name="colorPrimary">#79c85b</item>
+    </style>
+
+    <style name="Theme_star_desert" parent="Theme.MultiTheme">
+        <item name="thCalendarGradientColor1">@color/transparent</item>
+        <item name="thCalendarGradientColor2">#b3ffffff</item>
+        <item name="thMainBackgroundColor">#f4ecf1</item>
+        <item name="thMainMenuBackgroundColor1">#f3f6da</item>
+        <item name="thMainMenuBackgroundColor2">#e0f4ea</item>
+        <item name="thMainThemeAlphaColor">#ccfe8493</item>
+        <item name="thMainThemeAlphaColor60">#99fe8493</item>
+        <item name="thMainThemeBackgroundImage">@drawable/image_background_theme_star_desert</item>
+        <item name="colorPrimary">#fe8493</item>
+    </style>
+
+    <style name="Theme_guru_dark" parent="Theme.MultiTheme">
+        <item name="thCalendarGradientColor1">@color/transparent</item>
+        <item name="thCalendarGradientColor2">#34383c</item>
+        <item name="thMainBackgroundColor">#001520</item>
+        <item name="thMainMenuBackgroundColor1">#22272a</item>
+        <item name="thMainMenuBackgroundColor2">#22272a</item>
+        <item name="thMainThemeAlphaColor">#cc0085ff</item>
+        <item name="thMainThemeAlphaColor60">#990085ff</item>
+        <item name="thMainThemeBackgroundImage">@drawable/image_background_theme_guru_dark</item>
+        <item name="colorPrimary">#0085ff</item>
+    </style>
+
+    <style name="Theme_pink_cyan" parent="Theme.MultiTheme">
+        <item name="thMainBackgroundColor">#fdd7e3</item>
+        <item name="thMainThemeAlphaColor">#ccff6da2</item>
+        <item name="thMainThemeBackgroundImage">@drawable/image_background_theme_pink_cyan</item>
+        <item name="colorPrimary">#ff6da2</item>
+        <item name="thMainThemeAlphaColor60">#ff6da2</item>
+    </style>
+</resources>

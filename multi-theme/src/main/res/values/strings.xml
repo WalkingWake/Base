@@ -1,0 +1,5 @@
+<resources>
+    <string name="select_theme_for_notes">Select Theme for Notes</string>
+    <string name="use_now">Use now</string>
+    <string name="later">Later</string>
+</resources>
