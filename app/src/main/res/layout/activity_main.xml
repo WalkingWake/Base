@@ -11,8 +11,7 @@
         android:id="@+id/ivBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="?attr/thMainThemeBackgroundImage" />
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/tvMain"

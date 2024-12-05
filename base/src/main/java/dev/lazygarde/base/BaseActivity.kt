@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
-import dev.lazygarde.multi.theme.MultiThemeHelper
 
 abstract class BaseActivity<BINDING : ViewBinding> : AppCompatActivity() {
 
@@ -18,7 +17,6 @@ abstract class BaseActivity<BINDING : ViewBinding> : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         initWindow()
-        MultiThemeHelper.setUpActivityWithSavedTheme(this)
         super.onCreate(savedInstanceState)
 
         binding = bindingInflater.invoke(layoutInflater).apply {

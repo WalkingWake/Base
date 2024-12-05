@@ -1,5 +1,6 @@
 package dev.lazygarde.multi.theme
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ShapeDrawable
 import android.graphics.drawable.shapes.RoundRectShape
@@ -11,6 +12,8 @@ import androidx.core.view.WindowInsetsControllerCompat
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
+import dev.lazygarde.multi.theme.Const.SELECTED_THEME
+import dev.lazygarde.multi.theme.Const.THEME
 import dev.lazygarde.multi.theme.databinding.ActivitySelectThemeBinding
 import kotlin.math.abs
 
@@ -28,16 +31,16 @@ class SelectThemeActivity : AppCompatActivity() {
         binding = ActivitySelectThemeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val theme = intent.getIntExtra(THEME, -1)
+        initSavedTheme(theme)
+
         initWindow()
         initListener()
         setUpViewPager()
-        initSavedTheme()
-
-
     }
 
-    private fun initSavedTheme() {
-        val savedTheme = MultiThemeHelper.getSavedTheme(this)
+    private fun initSavedTheme(theme: Int) {
+        val savedTheme = customThemes.find { it.theme == theme } ?: customThemes[0]
         setCustomTheme(savedTheme)
         viewPager2?.setCurrentItem(customThemes.indexOf(savedTheme) + 1, false)
     }
@@ -73,10 +76,9 @@ class SelectThemeActivity : AppCompatActivity() {
             finish()
         }
         binding.tvUseNow.setOnClickListener {
-            MultiThemeHelper.saveTheme(
-                this,
-                MultiThemeHelper.getCustomThemes()[currentViewPagerIndex]
-            )
+            val intent = Intent()
+            intent.putExtra(SELECTED_THEME, customThemes[currentViewPagerIndex].theme)
+            setResult(RESULT_OK, intent)
             finish()
         }
     }

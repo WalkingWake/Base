@@ -17,24 +17,24 @@ object MultiThemeHelper {
         )
     }
 
-    fun setUpActivityWithSavedTheme(activity: Activity) {
-        val savedTheme = getSavedTheme(activity)
-        activity.setTheme(savedTheme.theme)
-        WindowInsetsControllerCompat(activity.window, activity.window.decorView)
-            .isAppearanceLightStatusBars = !savedTheme.isDark
-    }
-
-    fun getSavedTheme(context: Context): CustomTheme {
-        val preferences = context.getSharedPreferences(Const.THEME_PREFERENCE, Context.MODE_PRIVATE)
-        val theme = preferences.getInt(Const.SAVED_THEME, R.style.Theme_blue_enchantress)
-        Log.d("MultiThemeHelper", "getSavedTheme: $theme")
-        return getCustomThemes().find { it.theme == theme } ?: getCustomThemes()[0]
-    }
-
-    internal fun saveTheme(context: Context, customTheme: CustomTheme) {
-        val preferences = context.getSharedPreferences(Const.THEME_PREFERENCE, Context.MODE_PRIVATE)
-        preferences.edit().putInt(Const.SAVED_THEME, customTheme.theme).apply()
-    }
+//    fun setUpActivityWithSavedTheme(activity: Activity) {
+//        val savedTheme = getSavedTheme(activity)
+//        activity.setTheme(savedTheme.theme)
+//        WindowInsetsControllerCompat(activity.window, activity.window.decorView)
+//            .isAppearanceLightStatusBars = !savedTheme.isDark
+//    }
+//
+//    fun getSavedTheme(context: Context): CustomTheme {
+//        val preferences = context.getSharedPreferences(Const.THEME_PREFERENCE, Context.MODE_PRIVATE)
+//        val theme = preferences.getInt(Const.SAVED_THEME, R.style.Theme_blue_enchantress)
+//        Log.d("MultiThemeHelper", "getSavedTheme: $theme")
+//        return getCustomThemes().find { it.theme == theme } ?: getCustomThemes()[0]
+//    }
+//
+//    internal fun saveTheme(context: Context, customTheme: CustomTheme) {
+//        val preferences = context.getSharedPreferences(Const.THEME_PREFERENCE, Context.MODE_PRIVATE)
+//        preferences.edit().putInt(Const.SAVED_THEME, customTheme.theme).apply()
+//    }
 
     fun getCustomThemes(): List<CustomTheme> {
         return listOf(

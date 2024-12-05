@@ -12,5 +12,6 @@ class PreferenceUtil @Inject constructor(
 ) : LazyPreference(preference, editor) {
 
     var isFirstRun by booleanPref("isFirstRun", true)
+    var theme by intPref("theme", 0)
 
 }
